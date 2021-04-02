@@ -27,12 +27,7 @@ function App() {
     setRemaining(remainingBudget);
 
     setCreateExpense(false);
-  }, [expense])
- 
-  // adding a new expense
-  const addNewExpense = expense => {
-    
-  }
+  }, [expense, createExpense, expenses, remaining])
   return (
     <div className="container">
       <header>
