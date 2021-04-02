@@ -1,8 +1,10 @@
 import react, { Fragment, useState } from "react";
 
 const Question = () => {
+
   // defining states
-  const  [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(0);
+  const [error, setError] = useState(false); 
 
   // change handler
   const defineBudget = e => {
@@ -14,14 +16,19 @@ const Question = () => {
       e.preventDefault();
 
       // validation
+      if(qty < 1 || isNaN(qty)){
+          setError(true);
+          return;
+      }
 
       // on validation success
+      setError(false);
+
   }
 
     return (
         <Fragment>
             <h2>Add your budget</h2>
-
             <form
                 onSubmit={addBudget}
             >
