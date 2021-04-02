@@ -1,4 +1,4 @@
-import react, { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 import Error from "./Error";
 
 const Question = ({setBudget, setRemaining}) => {
@@ -40,7 +40,7 @@ const Question = ({setBudget, setRemaining}) => {
                 <input
                     type="number"
                     className="u-full-width"
-                    placeholder="Your badget"
+                    placeholder="Add your budget"
                     onChange={defineBudget}
                 />
                 <input
