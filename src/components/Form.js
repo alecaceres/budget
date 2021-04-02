@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Error from "./Error";
 import shortid from "shortid";
 
-const Form = () => {
+const Form = ({addNewExpense}) => {
 
     // setting states
     const [name, setName] = useState('');
@@ -32,8 +32,11 @@ const Form = () => {
         console.log("gasto", expense)
 
         // passing expense to main component
+        addNewExpense(expense);
 
         // resetting form
+        setName('');
+        setQty(0);
     }
 
     return (
