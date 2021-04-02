@@ -20,13 +20,13 @@ function App() {
         ...expenses,
         expense
       ])
-    }
 
     // substracting from the current budget
     const remainingBudget = remaining - expense.qty;
     setRemaining(remainingBudget);
 
     setCreateExpense(false);
+    }
   }, [expense, createExpense, expenses, remaining])
   return (
     <div className="container">

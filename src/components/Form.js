@@ -30,8 +30,6 @@ const Form = ({setExpense, setCreateExpense}) => {
             id: shortid.generate()
         }
 
-        console.log("gasto", expense)
-
         // passing expense to main component
         setExpense(expense);
         setCreateExpense(true);
@@ -64,7 +62,7 @@ const Form = ({setExpense, setCreateExpense}) => {
                     className="u-full-width"
                     placeholder="e.g. 300"
                     value={qty}
-                    onChange={e=>parseInt(setQty(e.target.value))}
+                    onChange={e=>setQty(parseInt(e.target.value))}
                 />
             </div>
             <input
